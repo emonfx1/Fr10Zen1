@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Attack on Titan - AOT Universe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Loader */
+    #loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      z-index: 10000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Navbar */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: crimson;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+      width: 25px;
+      transition: 0.4s;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+      nav {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        background: #111;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.4s;
+      }
+      nav.show {
+        left: 0;
+      }
+      nav a {
+        padding: 10px 20px;
+        border-bottom: 1px solid #222;
+      }
+    }
+
+    section {
+      padding: 100px 10% 50px;
+      min-height: 100vh;
+    }
+
+    .hero {
+      background: url('https://wallpapercave.com/wp/wp7360555.jpg') center/cover no-repeat;
+      text-align: center;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .hero h1, .hero p {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideFadeIn 1s ease forwards;
+    }
+
+    .hero h1 { font-size: 4em; animation-delay: 0.2s; }
+    .hero p { font-size: 1.3em; animation-delay: 0.6s; }
+
+    @keyframes slideFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-text {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: 1s ease;
+    }
+
+    .fade-text.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .characters, .timeline {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 10px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .characters img {
+      height: 320px;
+      border-radius: 15px;
+      scroll-snap-align: center;
+      transition: 0.3s;
+    }
+
+    .characters img:hover { transform: scale(1.05); }
+
+    .event {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      min-width: 250px;
+      scroll-snap-align: center;
+    }
+
+    footer {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<div id="loader">
+  <h1>FR10Pro AOT...</h1>
+</div>
+
+<!-- Music -->
+<audio autoplay loop>
+  <source src="https://vgmsite.com/soundtracks/shingeki-no-kyojin-original-soundtrack/snvxyljg/1-01.%20Attack%20on%20Titan.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Header -->
+<header>
+  <div class="logo">AOT</div>
+  <div class="menu-toggle" onclick="toggleMenu(this)">
+    <span></span><span></span><span></span>
+  </div>
+  <nav id="nav">
+    <a href="#hero">Home</a>
+    <a href="#story">Story</a>
+    <a href="https://x.com/Fr10pro">Dev.@FR10PRO</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <h1>Attack on Titan</h1>
+  <p>The battle for freedom has begun.</p>
+</section>
+
+<!-- Story -->
+<section id="story">
+  <h1 class="fade-text">Storyline Title: Echoes Beyond the Wall</h1> <br>
+  <h2 class="fade-text">Introduction</h2>
+  <p class="fade-text" style="max-width:800px;margin:auto;line-height:1.6">
+    In a world ravaged by monstrous, towering creatures known as Titans, humanity has been driven to the brink of extinction. The last remnants of civilization cling to life within three concentric walls: Aegis, Valor, and Eterna. For over a century, these walls held strong — until the day they didn’t.
+  </p>
+</section>
+<!-- Story -->
+<section id="story">
+  <h2 class="fade-text">Chapter 1: The Fall of Valor</h2>
+  <p class="fade-text" style="max-width:800px;margin:auto;line-height:1.6">
+    It began with thunder from the sky and a Titan unlike any seen before. Towering over the others, armored and swift, it breached Wall Valor in an instant. Chaos reigned. Families were torn apart. Cities burned. And within it all, a boy named Kael watched helplessly as his home vanished beneath rubble and flame.
+  </p> <br> <br>
+  
+<h2 class="fade-text">Chapter 2: The Shadow Regiment</h2>
+  <p class="fade-text" style="max-width:800px;margin:auto;line-height:1.6">
+    Years later, Kael joins the elite Shadow Regiment — a special ops division trained to fight Titans beyond the safety of the walls. His goal: uncover the truth behind the Titans' origin and avenge his family. Alongside his best friend Iria, a sharp-minded strategist, and Rogan, a brute with a kind heart, Kael begins to learn that the Titans might not be the true enemy after all.
+  </p> <br> <br>
+  
+  <h2 class="fade-text">Chapter 3: Echoes of Rebellion</h2>
+  <p class="fade-text" style="max-width:800px;margin:auto;line-height:1.6">
+    Deep beneath the capital lies a forbidden lab — containing relics, files, and evidence of human experimentation. Kael discovers that the Titans may have once been... people. Betrayal runs deep within the ruling council. Iria’s family is tied to the conspiracy. Rogan carries a curse of his own.
+  </p> <br> <br>
+  
+  <h2 class="fade-text">Chapter 4: Rise of the Forgotten</h2>
+  <p class="fade-text" style="max-width:800px;margin:auto;line-height:1.6">
+    A mysterious faction, The Forgotten, emerges — survivors from outside the known world. They carry knowledge, weapons, and a grim warning: the Titans were created as guardians. Something far worse is waking — the Leviathans, beings of ancient power, long buried beneath the sea.
+  </p> <br> <br>
+  
+    <h2 class="fade-text">Final Chapter: Beyond the Walls</h2>
+  <p class="fade-text" style="max-width:800px;margin:auto;line-height:1.6">
+    The final battle nears. Kael must lead a broken army beyond Eterna, into lands no map dares show. Trust is scarce. Survival, uncertain. But the truth? Worth everything. The final mission isn’t to destroy Titans... it's to stop humanity from repeating its own curse.
+      </p> <br> <br>
+
+<!-- Timeline -->
+
+<!-- Characters -->
+
+<!-- Footer -->
+<footer>
+  <p>Attack on Titan Fan Site | Final Season Tribute</p> <br>
+  <p>© 2025 FR10Pro. All rights reserved.</p>
+</footer>
+
+<!-- Script -->
+<script>
+  window.onload = () => {
+    document.getElementById("loader").style.display = "none";
+  };
+
+  const toggleMenu = (el) => {
+    document.getElementById('nav').classList.toggle('show');
+    el.classList.toggle('open');
+  };
+
+  // Scroll Animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-text').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
